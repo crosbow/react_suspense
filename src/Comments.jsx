@@ -1,11 +1,11 @@
-import use from "./hooks/use";
+// import use from "./hooks/use";
+import { use } from "react";
 import { fetchData } from "./utils/data";
 
 const Comments = ({ postId }) => {
   const comments = use(
     fetchData(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
   );
-  console.log(comments);
 
   return (
     <ul>
